@@ -1,10 +1,15 @@
 import logging
 import json
 import time
+import os
 from datetime import datetime
 from collections import defaultdict, deque
 from flask import Flask, render_template, redirect, url_for, request, jsonify
 from PIL import Image
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
 try:
     import predict
